@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Thêm người dùng</title>
+
+    <!-- Icons font CSS-->
+    <link href="../Dictionary/library/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../Dictionary/library/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="../Dictionary/library/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../Dictionary/library/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../Dictionary/css/registerStyle.css" rel="stylesheet" media="all">
+    <link href="../Dictionary/css/base.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+            <div class="navi-bar">
+                <ul>
+                    <li><a href="Admin.html">HOME</a></li>
+                    <li><a href="AddUser.html">USER</a></li>
+                    <li><a href="AddFarm.html">FARM</a></li>
+                    <li style="float:right"><a class="active" href="Status.html">STATUS</a></li>
+                    </ul>
+                </div>
+    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="-cardheading"></div>
+                <div class="card-body">
+                    <h2 class="title">Thêm người dùng nhập liệu</h2>
+                    <form method="POST" id="user-infomation">
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Họ và tên" name="username">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Tên tài khoản" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-2" type="password" placeholder="Mật khẩu" name="password">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-2" type="password" placeholder="Nhập lại mật khẩu" name="repassword">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Chỗ ở hiện nay" name="address">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Quê quán" name="birth_place">
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2 js-datepicker" type="text" placeholder="Ngày sinh" name="birthday">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="gender">
+                                            <option disabled="disabled" selected="selected">Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" type="text" placeholder="Số CMT" name="res_indentity">
+                                </div>
+                            </div>
+                             <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" type="text" placeholder="Nơi cấp" name="res_indentity_place">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2 js-datepicker" type="text" placeholder="Ngày cấp" name="res_indentity_date">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="ethnic">
+                                            <option disabled="disabled" selected="selected">Dân tộc</option>
+                                            <option>Kinh</option>
+                                            <option>Tày</option>
+                                            <option>Nùng</option>
+                                            <option>Mèo</option>
+                                            <option>Ê-đê</option>
+                                            <option>Mường</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <div class="p-t-30">
+                            <button class="btn btn--radius btn--green" type="submit" id="submit-user" onclick="postUser()">Thêm</button>
+                        </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Jquery JS-->
+    <script src="../Dictionary/library/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../Dictionary/library/vendor/select2/select2.min.js"></script>
+    <script src="../Dictionary/library/vendor/datepicker/moment.min.js"></script>
+    <script src="../Dictionary/library/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../Dictionary/script/registerScript.js"></script>
+    <script src="../Dictionary/script/requestAddUser.js"></script>
+    <script>
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
